@@ -6,10 +6,15 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.labxpert.model.enums.Role;
 
+import lombok.Data;
+
+@Data
 @Entity
+@Table(name = "utilisateur")
 public class Utilisateur {
 	
 	
@@ -24,40 +29,9 @@ public class Utilisateur {
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNomUtilisateur() {
-		return nomUtilisateur;
-	}
-
-	public void setNomUtilisateur(String nomUtilisateur) {
-		this.nomUtilisateur = nomUtilisateur;
-	}
-
-	public String getMotDePasse() {
-		return motDePasse;
-	}
-
-	public void setMotDePasse(String motDePasse) {
-		this.motDePasse = motDePasse;
-	}
-
-	public Role getRole() {
-		return role;
-	}
-
-	public void setRole(Role role) {
-		this.role = role;
-	}
-	
     
-	
+    private String nom_et_prenom;
+    private String email;
+		
 
 }

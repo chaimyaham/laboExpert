@@ -4,8 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
+@Table(name = "rapport_statistique")
 public class RapportStatistique {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,29 +20,5 @@ public class RapportStatistique {
 
     private String periodeRapport;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTypeRapport() {
-		return typeRapport;
-	}
-
-	public void setTypeRapport(String typeRapport) {
-		this.typeRapport = typeRapport;
-	}
-
-	public String getPeriodeRapport() {
-		return periodeRapport;
-	}
-
-	public void setPeriodeRapport(String periodeRapport) {
-		this.periodeRapport = periodeRapport;
-	}
-
-  
+	
 }
