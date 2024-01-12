@@ -1,5 +1,8 @@
 package com.labxpert.model;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -9,11 +12,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.labxpert.model.enums.Role;
+import com.labxpert.model.enums.Sexe;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "utilisateur")
 public class Utilisateur {
 	

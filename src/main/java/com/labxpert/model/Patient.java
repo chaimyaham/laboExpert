@@ -14,10 +14,16 @@ import javax.persistence.Table;
 
 import com.labxpert.model.enums.Sexe;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "patient")
 public class Patient {
 	
